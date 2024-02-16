@@ -53,6 +53,10 @@ void Character::displayHealth(){
 
 // Get/Set
 
+string Character::getName(){
+    return name;
+}
+
 double Character::getHealth(){
     return health;
 }

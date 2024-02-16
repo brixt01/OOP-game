@@ -26,6 +26,7 @@ public:
 	void displayHealth();
 
 	// Set/Get
+	string getName();
     double getHealth();
 };
 
