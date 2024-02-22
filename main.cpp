@@ -5,6 +5,7 @@
 #include "Character.h"
 #include "HealthBar.h"
 #include "Weapon.h"
+#include "Inventory.h"
 
 using namespace std;        // Namespace
 
@@ -26,7 +27,18 @@ int main(){
     Player player("Player", 100, healthbar, fists);
     Character goblin("Goblin", 100, healthbar, fists);
 
-    // Display initial healths
+    player.inventory.addItem(fists);
+    player.inventory.addItem(fists);
+    player.inventory.addItem(fists);
+    player.inventory.addItem(sword);
+
+    player.inventory.displayItems();
+
+    int temp;
+    cin >> temp;
+    cout << player.inventory.getItem(temp).getName() << endl;
+
+    /*
 
     cout << player.getName() << " has been attacked by a " << goblin.getName() << ". A fight ensues..." << endl;
     cout << endl;
@@ -45,6 +57,7 @@ int main(){
     fight(player, goblin);
     fight(player, goblin);
     fight(player, goblin);
+    */
 }
 
 void fight(Character& player, Character& enemy){

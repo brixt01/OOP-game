@@ -3,6 +3,7 @@
 
 #include "HealthBar.h"
 #include "Weapon.h"
+#include "Inventory.h"
 
 class Character{
 
@@ -31,6 +32,8 @@ public:
 };
 
 class Player:public Character{
+	public:
+		Inventory inventory;
 	public:
 		Player(string character_name, double max_health, HealthBar& healthbar, Weapon& weapon);
 };
