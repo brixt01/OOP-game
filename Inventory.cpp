@@ -21,4 +21,5 @@ void Inventory::displayItems(){
     for(int i=0; i<inventory.size(); i++){
         cout << i << ". " << inventory[i].getName() << endl;
     }
+    cout << endl;
 }

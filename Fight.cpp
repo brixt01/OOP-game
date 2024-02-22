@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Fight::Fight(Character& character_player, Character& character_enemy){
+Fight::Fight(Player& character_player, Character& character_enemy){
     player = character_player;
     enemy = character_enemy;
     running = true;
@@ -40,6 +40,10 @@ void Fight::progress(){
     }
 
     else if(choice_val == 2){
+        player.inventory.displayItems();
+    }
+
+    else if(choice_val == 3){
         cout << "You got away" << endl;
         cout << endl;
         running = false;
@@ -50,7 +54,8 @@ void Fight::progress(){
 int Fight::choice(){
     cout << "Would you like to:" << endl;
     cout << "1. Attack" << endl;
-    cout << "2. Run" << endl;
+    cout << "2. Check inventory" << endl;
+    cout << "3. Run" << endl;
     int choice;
     cin >> choice;
     cout << endl;

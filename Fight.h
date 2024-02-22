@@ -8,13 +8,13 @@ using namespace std;
 class Fight{
 
 private:
-    Character player;
+    Player player;
     Character enemy;
 
 public:
     bool running;
 
-    Fight(Character& player, Character& enemy);
+    Fight(Player& player, Character& enemy);
     
     void start();
     void progress();
