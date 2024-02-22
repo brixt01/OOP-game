@@ -21,7 +21,8 @@ Character::Character(string character_name, double character_max_health, HealthB
 // Methods
 
 void Character::damage(double amount){
-    if(health <= 0){
+    if(health - amount <= 0){
+        health = 0;
         return;
     }
     
@@ -30,7 +31,8 @@ void Character::damage(double amount){
 }
 
 void Character::heal(double amount){
-    if(health >= max_health){
+    if(health + amount >= max_health){
+        health = max_health;
         return;
     }
 

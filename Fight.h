@@ -18,7 +18,8 @@ public:
     
     void start();
     void progress();
-    void end();
+
+    int choice();
 
 };
 
