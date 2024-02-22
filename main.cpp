@@ -6,6 +6,7 @@
 #include "HealthBar.h"
 #include "Weapon.h"
 #include "Inventory.h"
+#include "Fight.h"
 
 using namespace std;        // Namespace
 
@@ -17,53 +18,40 @@ int main(){
     cout << "Welcome to the game!" << endl;
     cout << endl;
 
-    // Set up health bar, weapon and character objects
+    // Healthbars
+    HealthBar player_healthbar('_', '#');
+    HealthBar enemy_healthbar('_', '@');
 
-    HealthBar healthbar('_', '#');
-
+    // Weapons
     Weapon fists("fists", 1);
     Weapon sword("sword", 5);
+    Weapon club("club", 3);
+    Weapon axe("axe", 6);
 
-    Player player("Player", 100, healthbar, fists);
-    Character goblin("Goblin", 100, healthbar, fists);
+    // Characters
+    Player player("Player", 100, player_healthbar, fists);
+    Character goblin("Goblin", 50, enemy_healthbar, fists);
+    Character armed_goblin("Armed Goblin", 70, enemy_healthbar, club);
+    Character knight("Knight", 100, enemy_healthbar, sword);
 
-    player.inventory.addItem(fists);
-    player.inventory.addItem(fists);
-    player.inventory.addItem(fists);
-    player.inventory.addItem(sword);
+    // FIGHT 1
+    Fight fight1(player, goblin);
+    fight1.start();
+    while(fight1.running){
+        fight1.progress();
+    }
 
-    player.inventory.displayItems();
+    // FIGHT 2
+    Fight fight2(player, armed_goblin);
+    fight2.start();
+    while(fight2.running){
+        fight2.progress();
+    }
 
-    int temp;
-    cin >> temp;
-    cout << player.inventory.getItem(temp).getName() << endl;
-
-    /*
-
-    cout << player.getName() << " has been attacked by a " << goblin.getName() << ". A fight ensues..." << endl;
-    cout << endl;
-
-    player.displayHealth();
-    goblin.displayHealth();
-    cout << endl;
-
-    fight(player, goblin);
-    fight(player, goblin);
-    fight(player, goblin);
-
-    player.equip_weapon(sword);
-    cout << endl;
-
-    fight(player, goblin);
-    fight(player, goblin);
-    fight(player, goblin);
-    */
-}
-
-void fight(Character& player, Character& enemy){
-    player.attack(enemy);
-    enemy.attack(player);
-    enemy.displayHealth();
-    player.displayHealth();
-    cout << endl;
+    // FIGHT 3
+    Fight fight3(player, knight);
+    fight3.start();
+    while(fight3.running){
+        fight3.progress();
+    }
 }

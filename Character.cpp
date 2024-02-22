@@ -8,12 +8,13 @@
 using namespace std;
 
 // Constructor
+Character::Character(){}
+
 Character::Character(string character_name, double character_max_health, HealthBar& character_health_bar, Weapon& character_weapon){
     name = character_name;
     max_health = character_max_health;
     health_bar= character_health_bar;
     weapon = character_weapon;
-
     health = max_health;
 }
 

@@ -17,6 +17,7 @@ private:
 
 public:
 	// Constructor
+	Character();
 	Character(string character_name, double max_health, HealthBar& healthbar, Weapon& weapon);
 
 	// Methods
