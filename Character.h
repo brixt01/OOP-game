@@ -30,4 +30,9 @@ public:
     double getHealth();
 };
 
+class Player:public Character{
+	public:
+		Player(string character_name, double max_health, HealthBar& healthbar, Weapon& weapon);
+};
+
 #endif

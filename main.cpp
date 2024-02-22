@@ -23,7 +23,7 @@ int main(){
     Weapon fists("fists", 1);
     Weapon sword("sword", 5);
 
-    Character player("Player", 100, healthbar, fists);
+    Player player("Player", 100, healthbar, fists);
     Character goblin("Goblin", 100, healthbar, fists);
 
     // Display initial healths

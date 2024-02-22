@@ -7,7 +7,6 @@
 using namespace std;
 
 // Constructor
-
 Character::Character(string character_name, double character_max_health, HealthBar& character_health_bar, Weapon& character_weapon){
     name = character_name;
     max_health = character_max_health;
@@ -51,12 +50,16 @@ void Character::displayHealth(){
     health_bar.display(name, health, max_health);
 }
 
-// Get/Set
-
 string Character::getName(){
     return name;
 }
 
 double Character::getHealth(){
     return health;
+}
+
+// PLAYER
+
+Player::Player(string character_name, double max_health, HealthBar& healthbar, Weapon& weapon)
+: Character(character_name, max_health, healthbar, weapon){
 }
