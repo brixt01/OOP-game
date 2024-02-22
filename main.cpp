@@ -21,7 +21,7 @@ int main(){
     HealthBar healthbar('_', '#');
 
     Weapon fists("fists", 1);
-    Weapon sword("Sword", 5);
+    Weapon sword("sword", 5);
 
     Character player("Player", 100, healthbar, fists);
     Character goblin("Goblin", 100, healthbar, fists);
