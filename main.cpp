@@ -39,12 +39,12 @@ int main(){
     player.inventory.addItem(sword);
     player.inventory.addItem(sword);
     player.inventory.addItem(club);
-    player.inventory.addItem(key);
     
-    // Vector of fights
-    vector<Item> drops{key};
+    vector<Item> drops{key, key, axe};
     Fight fight(player, goblin, drops);
     fight.start();
 
     player.inventory.displayItems();
+
+    while(true);
 }

@@ -68,5 +68,4 @@ Player::Player(){}
 
 Player::Player(string character_name, double max_health, HealthBar& healthbar, Weapon& weapon)
 : Character(character_name, max_health, healthbar, weapon){
-    inventory = inventory;
 }

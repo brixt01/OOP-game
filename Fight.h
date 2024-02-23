@@ -8,8 +8,8 @@ using namespace std;
 class Fight{
 
 private:
-    Player player;
-    Character enemy;
+    Player* player;
+    Character* enemy;
 
     bool running;
     vector<Item> drops;

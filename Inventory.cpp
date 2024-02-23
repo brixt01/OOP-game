@@ -8,7 +8,7 @@ Item Inventory::getItem(int index){
     return inventory[index];
 }
 
-void Inventory::addItem(Item item){
+void Inventory::addItem(Item& item){
     inventory.push_back(item);
 }
 

@@ -15,7 +15,7 @@ class Inventory{
         Inventory();
 
         Item getItem(int index);
-        void addItem(Item item);
+        void addItem(Item& item);
         void removeItem(int index);
         void displayItems();
 };
