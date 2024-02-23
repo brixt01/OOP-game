@@ -26,11 +26,6 @@ Character goblin("Goblin", 10, enemy_healthbar, fists);
 Character armed_goblin("Armed Goblin", 50, enemy_healthbar, club);
 Character knight("Knight", 50, enemy_healthbar, sword);
 
-// Fights
-Fight fight1(player, goblin);
-Fight fight2(player, armed_goblin);
-Fight fight3(player, knight);
-
 int main(){
 
     // Welcome message
@@ -44,11 +39,6 @@ int main(){
     player.inventory.displayItems();
     
     // Vector of fights
-    vector<Fight> fights{fight1, fight2, fight3};
-
-    // Go through every fight
-    for(int i=0; i<fights.size(); i++){
-        fights[i].run();
-    }
-    
+    Fight fight(player, goblin);
+    fight.run();
 }
