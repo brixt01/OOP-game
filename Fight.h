@@ -12,16 +12,20 @@ private:
     Character enemy;
 
     bool running;
+    vector<Item> drops;
 
     int choice();
-    void start();
     void progress();
+    
+    void win();
+    void lose();
+    void run();
 
 public:
 
-    Fight(Player& player, Character& enemy);
+    Fight(Player& player, Character& enemy, vector<Item>& item_drops);
 
-    void run();
+    void start();
 
 };
 

@@ -42,6 +42,9 @@ int main(){
     player.inventory.addItem(key);
     
     // Vector of fights
-    Fight fight(player, goblin);
-    fight.run();
+    vector<Item> drops{key};
+    Fight fight(player, goblin, drops);
+    fight.start();
+
+    player.inventory.displayItems();
 }
