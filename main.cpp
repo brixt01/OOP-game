@@ -48,9 +48,7 @@ int main(){
 
     // Go through every fight
     for(int i=0; i<fights.size(); i++){
-        fights[i].start();
-        while(fights[i].running){
-            fights[i].progress();
-        }
+        fights[i].run();
     }
+    
 }

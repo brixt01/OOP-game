@@ -11,15 +11,16 @@ private:
     Player player;
     Character enemy;
 
+    int choice();
+    void start();
+    void progress();
+
 public:
     bool running;
 
     Fight(Player& player, Character& enemy);
     
-    void start();
-    void progress();
-
-    int choice();
+    void run();
 
 };
 

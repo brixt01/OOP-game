@@ -8,6 +8,14 @@ Fight::Fight(Player& character_player, Character& character_enemy){
     running = true;
 }
 
+void Fight::run(){
+    start();
+
+    while(running){
+        progress();
+    }
+}
+
 void Fight::start(){
     cout << player.getName() << " has been attacked by a " << enemy.getName() << ". A fight ensues..." << endl;
     cout << endl;
