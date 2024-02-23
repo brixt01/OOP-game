@@ -1,7 +1,7 @@
 #ifndef Inventory_cpp
 #define Inventory_cpp
 
-#include "Weapon.h"
+#include "Item.h"
 
 #include <vector>
 
@@ -9,13 +9,13 @@ using namespace std;
 
 class Inventory{
     private:
-        vector<Weapon> inventory;
+        vector<Item> inventory;
 
     public:
         Inventory();
 
-        Weapon getItem(int index);
-        void addItem(Weapon item);
+        Item getItem(int index);
+        void addItem(Item item);
         void removeItem(int index);
         void displayItems();
 };

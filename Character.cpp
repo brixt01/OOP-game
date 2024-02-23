@@ -1,6 +1,6 @@
 #include "Character.h"
 #include "HealthBar.h"
-#include "Weapon.h"
+#include "Item.h"
 #include "Inventory.h"
 
 #include <iostream>

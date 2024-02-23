@@ -1,14 +1,26 @@
-#ifndef Weapon_cpp
-#define Weapon_cpp
+#ifndef Item_cpp
+#define Item_cpp
 
 #include <iostream>
 
 using namespace std;
 
-class Weapon{
+class Item{
 
 private:
     string name;
+
+public: 
+    Item();
+    Item(string name);
+
+    string getName();
+
+};
+
+class Weapon: public Item{
+
+private:
     double damage;
 
 public:
@@ -16,7 +28,6 @@ public:
     Weapon(string name, double damage);
 
     double getDamage();
-    string getName();
 
 };
 

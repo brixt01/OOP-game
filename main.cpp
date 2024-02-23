@@ -4,7 +4,7 @@
 // Header files
 #include "Character.h"
 #include "HealthBar.h"
-#include "Weapon.h"
+#include "Item.h"
 #include "Inventory.h"
 #include "Fight.h"
 
@@ -19,6 +19,10 @@ Weapon fists("fists", 1);
 Weapon sword("sword", 5);
 Weapon club("club", 3);
 Weapon axe("axe", 6);
+
+// Items
+Item key("key");
+Item coin("coin");
 
 // Characters
 Player player("Player", 50, player_healthbar, fists);
@@ -35,8 +39,7 @@ int main(){
     player.inventory.addItem(sword);
     player.inventory.addItem(sword);
     player.inventory.addItem(club);
-
-    player.inventory.displayItems();
+    player.inventory.addItem(key);
     
     // Vector of fights
     Fight fight(player, goblin);
