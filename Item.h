@@ -11,7 +11,6 @@ private:
     string name;
 
 public: 
-    Item();
     Item(string name);
 
     string getName();
@@ -24,7 +23,6 @@ private:
     double damage;
 
 public:
-    Weapon();
     Weapon(string name, double damage);
 
     double getDamage();

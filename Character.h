@@ -1,5 +1,5 @@
-#ifndef Character_cpp
-#define Character_cpp
+#ifndef CHARACTER_H
+#define CHARACTER_H
 
 #include "HealthBar.h"
 #include "Item.h"
@@ -9,22 +9,21 @@ class Character{
 
 private:
 	// Attributes
-	string name;
-    double max_health;
-	double health;
+	string name = "character";
+    double max_health = 100;
+	double health = max_health;
 	HealthBar health_bar;
 	Weapon weapon;
 
 public:
 	// Constructor
-	Character();
-	Character(string character_name, double max_health, HealthBar& healthbar, Weapon& weapon);
+	Character(string name, double max_health, HealthBar& health_bar, Weapon& weapon);
 
 	// Methods
 	void damage(double amount);
     void heal(double amount);
 	void attack(Character& target);
-	void equip_weapon(Weapon& weapon);
+	void equipWeapon(Weapon& weapon);
 	void displayHealth();
 
 	// Set/Get
@@ -36,7 +35,6 @@ class Player: public Character{
 	public:
 		Inventory inventory;
 
-		Player();
 		Player(string character_name, double max_health, HealthBar& healthbar, Weapon& weapon);
 };
 

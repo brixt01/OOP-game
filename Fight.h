@@ -1,5 +1,5 @@
-#ifndef Fight_cpp
-#define Fight_cpp
+#ifndef FIGHT_H
+#define FIGHT_H
 
 #include "Character.h"
 
@@ -8,10 +8,10 @@ using namespace std;
 class Fight{
 
 private:
-    Player* player;
-    Character* enemy;
+    Player& player;
+    Character& enemy;
 
-    bool running;
+    bool running = true;
     vector<Item> drops;
 
     int choice();

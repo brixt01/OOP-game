@@ -4,23 +4,15 @@
 
 using namespace std;
 
-Item::Item(){}
-
-Item::Item(string item_name){
-    name = item_name;
-}
+Item::Item(string i_name)
+: name(i_name){}
 
 string Item::getName(){
     return name;
 }
 
-
-Weapon::Weapon(){}
-
-Weapon::Weapon(string weapon_name, double weapon_damage)
-: Item(weapon_name){
-    damage = weapon_damage;
-}
+Weapon::Weapon(string w_name, double w_damage)
+: Item(w_name), damage(w_damage){}
 
 // Methods
 

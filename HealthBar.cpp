@@ -6,20 +6,16 @@
 using namespace std;
 
 // Constructor
-
-HealthBar::HealthBar(){};
-
-HealthBar::HealthBar(char empty, char full){
-    empty_char = empty;
-    full_char = full;
-}
+HealthBar::HealthBar(char h_empty, char h_full)
+: empty(h_empty), full(h_full)
+{}
 
 // Methods
 
 void HealthBar::display(string name, double health, double max_health){
-    int full = ceil((health/max_health)*10);
-    int empty = 10 - full;
+    int n_full = ceil((health/max_health)*10);
+    int n_empty = 10 - n_full;
     cout << name << ": ";
-    cout << '[' << string(full, full_char) << string(empty, empty_char) << ']' << ' ';
+    cout << '[' << string(n_full, full) << string(n_empty, empty) << ']' << ' ';
     cout << health << '/' << max_health << endl;
 }

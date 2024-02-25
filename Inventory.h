@@ -1,5 +1,5 @@
-#ifndef Inventory_cpp
-#define Inventory_cpp
+#ifndef INVENTORY_H
+#define INVENTORY_H
 
 #include "Item.h"
 

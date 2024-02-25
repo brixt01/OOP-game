@@ -8,15 +8,9 @@
 using namespace std;
 
 // Constructor
-Character::Character(){}
 
-Character::Character(string character_name, double character_max_health, HealthBar& character_health_bar, Weapon& character_weapon){
-    name = character_name;
-    max_health = character_max_health;
-    health_bar= character_health_bar;
-    weapon = character_weapon;
-    health = max_health;
-}
+Character::Character(string c_name, double c_max_health, HealthBar& c_health_bar, Weapon& c_weapon)
+: name(c_name), max_health(c_max_health), health(c_max_health), health_bar(c_health_bar), weapon(c_weapon){}
 
 // Methods
 
@@ -45,7 +39,7 @@ void Character::attack(Character& target){
     target.damage(weapon.getDamage());
 }
 
-void Character::equip_weapon(Weapon& new_weapon){
+void Character::equipWeapon(Weapon& new_weapon){
     cout << name << " equipped " << new_weapon.getName() << endl;
     weapon = new_weapon;
 }
@@ -64,8 +58,5 @@ double Character::getHealth(){
 
 // PLAYER
 
-Player::Player(){}
-
-Player::Player(string character_name, double max_health, HealthBar& healthbar, Weapon& weapon)
-: Character(character_name, max_health, healthbar, weapon){
-}
+Player::Player(string c_name, double c_max_health, HealthBar& c_health_bar, Weapon& c_weapon)
+: Character(c_name, c_max_health, c_health_bar, c_weapon){}
