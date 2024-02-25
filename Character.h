@@ -9,9 +9,9 @@ class Character{
 
 private:
 	// Attributes
-	string name = "character";
-    double max_health = 100;
-	double health = max_health;
+	string name;
+    double max_health;
+	double health;
 	HealthBar health_bar;
 	Weapon weapon;
 
