@@ -1,5 +1,5 @@
-#ifndef Item_cpp
-#define Item_cpp
+#ifndef ITEM_H
+#define ITEM_H
 
 #include <iostream>
 
